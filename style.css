@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #04161d;
+  color: #F8F8F8;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid rgb(81, 81, 125);
+}
+
+footer {
+  text-align: center; 
+  color: #a0a0a0;  
+  margin-top: 5em;
+  margin-bottom: 2.5em;
+}
+
+header nav span{
+    margin: 0.625em;
+    color: #ffffff;
+}
+
+#photographe {
+     text-transform: uppercase;
+
+}
+
+#photographe span {
+    color: #00CBA0;
+}
+
+#hello{
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+#crea {
+  color: #00CBA0;
+}
+
+#latin {
+  color: #a0a0a0;
+  margin-top: 0em;
+  max-width: 37.5em;
+  padding: 0 5% 5% 5%
+}
+
+#boutons button {
+  background: transparent  ;
+  border: none;
+  color: #a0a0a0; 
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-bottom: 2.5em; 
+}
+#boutons button.lumiere {
+  background-color: #00CBA0; /* Fond vert */
+  color: #000000;
+}
+
+#soso {
+  font-size: 1.2rem;
+  margin-top: 0.625em;
+}
+
+#fin {
+  font-size: 0.9rem;
+  margin-top: 0.3125em;
+}
+
+
+.intro {
+  padding: 30px 5% ;
+}
+
+.choix{
+  display: flex;
+  justify-content: center;
+  gap: 1.5625em;
+  margin-top: 0.125em;
+}
+.galerie img {  
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+  padding: 0 5%;
+}
+/* Les polices */
+.yeseva-one-regular {
+  font-family: "Yeseva One", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media all and (max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+}
+/*  tablette */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .galerie {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/* telephone */ 
+@media all and (max-width: 768px) {
+  .galerie {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+  }
+  .galerie :nth-child(n+10) {
+    display: none;
+  }
+  #boutons button {
+    font-size: 0.9rem;
+  }
+}
